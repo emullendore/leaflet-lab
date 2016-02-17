@@ -2,24 +2,20 @@
 //for my Lab 1, still doesn't show up on the webpage and I can't figure out why
 //nothing for console log either and it appears correctly conntected with index.html
 function createMap(){
-
-  var map=L.map('map3', {
-
-    center:[-20,30],
-    zoom: 2
+var map=L.map('map3', {
+    center:[37,-97],
+    zoom: 4
   });
-L.tilelayer('https://a.tiles.mapbox.com/v4/emullendore.p5gjble8/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZW11bGxlbmRvcmUiLCJhIjoiY2lranhtcXQ4MDkya3Z0a200aGk0ZGRzMyJ9.zybsg8x8T8dh7mOgqTLiTg', {
-  attirbution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-  id: 'emullendore.p5gjble8',
-  accessToken:'pk.eyJ1IjoiZW11bGxlbmRvcmUiLCJhIjoiY2lranhtcXQ4MDkya3Z0a200aGk0ZGRzMyJ9.zybsg8x8T8dh7mOgqTLiTg'
+L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attirbution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
 }).addTo(map);
   getData(map);
 };
-console.log(map);
 function getData(map){
-  $.ajax('data/airqual.geojson', {
+  $.ajax("data/airqual.geojson", {
     dataType: "json",
     success: function(response){
+      //create marker options
       var geojsonMarkerOptions={
         radius: 5,
         fillColor: "#35ab54",
@@ -28,7 +24,7 @@ function getData(map){
         opacity: 1,
         fillOpacity: 1.0
       };
-      L.geojson(response, {
+      L.geoJson(response, {
       pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
       }
@@ -38,4 +34,3 @@ function getData(map){
   })
 };
 $(document).ready(createMap);
-console.log("hi");

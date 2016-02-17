@@ -1,6 +1,6 @@
 //$('#map2').html("Practice Map");
 
-function createMap(){
+function createMap2(){
   //create map, assign to id 'map2'
   var map=L.map('map2', {
     //set center, zoom
@@ -12,17 +12,17 @@ L.tileLayer('https://a.tiles.mapbox.com/v4/emullendore.p50l7ndp/{z}/{x}/{y}.png?
   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 }).addTo(map);
   //within createMap function getData command
-  getData(map);
+  getData2(map);
 };
 //getData will use ajax to to access geojson filter
-function getData(map){
-  $.ajax('data/MegaCities.geojson', {
+function getData2(map){
+  $.ajax("data/MegaCities.geojson", {
     dataType: "json",
     //with success, function will give geojson marker options in appearence
     success: function(response){
       var geojsonMarkerOptions={
         radius:4,
-        fillColor: "#35ab54",
+        fillColor: "#2e4276",
         color: "#000",
         weight:0.5,
         opacity: 1,
@@ -38,4 +38,4 @@ function getData(map){
 })
 };
 //add map to document
-$(document).ready(createMap);
+$(document).ready(createMap2);
