@@ -1,6 +1,5 @@
 
-//for my Lab 1, still doesn't show up on the webpage and I can't figure out why
-//nothing for console log either and it appears correctly conntected with index.html
+
 function createMap(){
 var map=L.map('map3', {
     center:[37,-97],
