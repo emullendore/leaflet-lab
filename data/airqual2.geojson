@@ -1,0 +1,545 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Fresno",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 2,
+        "name": "Fresno",
+        "desc": "Fresno, CA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 17.4,
+        "yr_2001": 18.3,
+        "yr_2002": 18.7,
+        "yr_2003": 17,
+        "yr_2004": 16.7,
+        "yr_2005": 16.6,
+        "yr_2006": 17,
+        "yr_2007": 16.6,
+        "yr_2008": 16.4,
+        "yr_2009": 16.4,
+        "yr_2010": 14,
+        "yr_2011": 16.7,
+        "yr_2012": 14,
+        "yr_2013": 15.9,
+        "yr_2014": 14.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.7857285,
+          36.7406807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Bakersfield",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 4,
+        "name": "Bakersfield",
+        "desc": "Bakersfield, CA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 14.2,
+        "yr_2001": 14,
+        "yr_2002": 15.6,
+        "yr_2003": 11.8,
+        "yr_2004": 12.1,
+        "yr_2005": 12.7,
+        "yr_2006": 12.4,
+        "yr_2007": 14,
+        "yr_2008": 14.8,
+        "yr_2009": 13.1,
+        "yr_2010": 10.4,
+        "yr_2011": 10.5,
+        "yr_2012": 9.9,
+        "yr_2013": 14.2,
+        "yr_2014": 12.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.0188599,
+          35.3669586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Visalia-Porterville",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 1,
+        "name": "Visalia",
+        "desc": "Visalia",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 23.9,
+        "yr_2001": 22.5,
+        "yr_2002": 23.2,
+        "yr_2003": 18.2,
+        "yr_2004": 17,
+        "yr_2005": 18.8,
+        "yr_2006": 18.8,
+        "yr_2007": 20.4,
+        "yr_2008": 19.8,
+        "yr_2009": 16,
+        "yr_2010": 13.6,
+        "yr_2011": 16.1,
+        "yr_2012": 14.8,
+        "yr_2013": 18.9,
+        "yr_2014": 17.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.29206,
+          36.33023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Modesto,",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 1,
+        "name": "Modesto",
+        "desc": "Modesto, CA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 18.7,
+        "yr_2001": 15.6,
+        "yr_2002": 18.7,
+        "yr_2003": 14.5,
+        "yr_2004": 13.6,
+        "yr_2005": 13.9,
+        "yr_2006": 14.8,
+        "yr_2007": 15,
+        "yr_2008": 16,
+        "yr_2009": 13,
+        "yr_2010": 12.1,
+        "yr_2011": 14.7,
+        "yr_2012": 11.9,
+        "yr_2013": 14.3,
+        "yr_2014": 11.4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121,
+          37.6386414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Los Angeles",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 8,
+        "name": "Los Angeles",
+        "desc": "Los Angeles, CA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 19.7,
+        "yr_2001": 20.5,
+        "yr_2002": 19.9,
+        "yr_2003": 18.3,
+        "yr_2004": 17,
+        "yr_2005": 15.3,
+        "yr_2006": 14.1,
+        "yr_2007": 14.6,
+        "yr_2008": 13.3,
+        "yr_2009": 12.6,
+        "yr_2010": 10.5,
+        "yr_2011": 11.2,
+        "yr_2012": 10.7,
+        "yr_2013": 10.6,
+        "yr_2014": 10.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.2453232,
+          34.0534897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "El Centro",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 2,
+        "name": "El Centro",
+        "desc": "El Centro, CA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 12.9,
+        "yr_2001": 11.9,
+        "yr_2002": 12.2,
+        "yr_2003": 11.2,
+        "yr_2004": 10.7,
+        "yr_2005": 11.3,
+        "yr_2006": 10.6,
+        "yr_2007": 10.7,
+        "yr_2008": 9.1,
+        "yr_2009": 9.7,
+        "yr_2010": 9.7,
+        "yr_2011": 10.5,
+        "yr_2012": 11,
+        "yr_2013": 10.2,
+        "yr_2014": 10.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.5699692,
+          32.7957993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "San Francisco",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 4,
+        "name": "San Francisco",
+        "desc": "San Francisco, CA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 11.2,
+        "yr_2001": 11.6,
+        "yr_2002": 12.9,
+        "yr_2003": 9.4,
+        "yr_2004": 10,
+        "yr_2005": 9.1,
+        "yr_2006": 9.6,
+        "yr_2007": 8.6,
+        "yr_2008": 9.6,
+        "yr_2009": 9,
+        "yr_2010": 8.4,
+        "yr_2011": 8.5,
+        "yr_2012": 7.5,
+        "yr_2013": 9.2,
+        "yr_2014": 7.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4196396,
+          37.7771187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Cincinnati",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 5,
+        "name": "Cincinnati",
+        "desc": "Cincinnati, OH",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 17.3,
+        "yr_2001": 16.9,
+        "yr_2002": 16.4,
+        "yr_2003": 16.1,
+        "yr_2004": 15,
+        "yr_2005": 17.7,
+        "yr_2006": 14.4,
+        "yr_2007": 15.6,
+        "yr_2008": 13.9,
+        "yr_2009": 13.1,
+        "yr_2010": 13.9,
+        "yr_2011": 12.8,
+        "yr_2012": 11.3,
+        "yr_2013": 11.1,
+        "yr_2014": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.5041275,
+          39.1071281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Pittsburgh",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 11,
+        "name": "Pittsburgh",
+        "desc": "Pittsburgh, PA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 16.1,
+        "yr_2001": 16.8,
+        "yr_2002": 15.5,
+        "yr_2003": 15.6,
+        "yr_2004": 15,
+        "yr_2005": 16.6,
+        "yr_2006": 14.3,
+        "yr_2007": 15.4,
+        "yr_2008": 13.1,
+        "yr_2009": 12.3,
+        "yr_2010": 12.7,
+        "yr_2011": 11.3,
+        "yr_2012": 10.4,
+        "yr_2013": 10.2,
+        "yr_2014": 10.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.997467,
+          40.4383392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Cleveland",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 7,
+        "name": "Cleveland",
+        "desc": "Cleveland, OH",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 17.3,
+        "yr_2001": 16.5,
+        "yr_2002": 15.8,
+        "yr_2003": 15.1,
+        "yr_2004": 14.6,
+        "yr_2005": 17.8,
+        "yr_2006": 13.6,
+        "yr_2007": 14.7,
+        "yr_2008": 13,
+        "yr_2009": 11.5,
+        "yr_2010": 12.4,
+        "yr_2011": 11.4,
+        "yr_2012": 11,
+        "yr_2013": 10.6,
+        "yr_2014": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6907196,
+          41.5047493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Philadelphia",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 12,
+        "name": "Philadelphia",
+        "desc": "Philadelphia, PA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 15,
+        "yr_2001": 15.4,
+        "yr_2002": 14.7,
+        "yr_2003": 14.6,
+        "yr_2004": 13.8,
+        "yr_2005": 14.5,
+        "yr_2006": 12.9,
+        "yr_2007": 13.6,
+        "yr_2008": 12.7,
+        "yr_2009": 10.9,
+        "yr_2010": 10.9,
+        "yr_2011": 10.7,
+        "yr_2012": 9.8,
+        "yr_2013": 9.5,
+        "yr_2014": 9.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1624527,
+          39.9522781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Harrisburg",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 2,
+        "name": "Harrisburg",
+        "desc": "Harrisburg, PA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 15.2,
+        "yr_2001": 15.6,
+        "yr_2002": 14.7,
+        "yr_2003": 15.7,
+        "yr_2004": 15.4,
+        "yr_2005": 15.2,
+        "yr_2006": 13.5,
+        "yr_2007": 14,
+        "yr_2008": 13.1,
+        "yr_2009": 11.6,
+        "yr_2010": 11.3,
+        "yr_2011": 11.8,
+        "yr_2012": 11.2,
+        "yr_2013": 11.3,
+        "yr_2014": 10.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.8823395,
+          40.2599297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "New York",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 14,
+        "name": "New York",
+        "desc": "New York, NY",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 14.3,
+        "yr_2001": 13.9,
+        "yr_2002": 13.3,
+        "yr_2003": 13.5,
+        "yr_2004": 12.4,
+        "yr_2005": 13.7,
+        "yr_2006": 11.8,
+        "yr_2007": 12.6,
+        "yr_2008": 11.4,
+        "yr_2009": 9.3,
+        "yr_2010": 9.1,
+        "yr_2011": 9.8,
+        "yr_2012": 9,
+        "yr_2013": 8.7,
+        "yr_2014": 8.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8317032,
+          40.7820015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Louisville",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 1,
+        "name": "Louisville",
+        "desc": "Louisville, KY",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 16.3,
+        "yr_2001": 15.7,
+        "yr_2002": 14.6,
+        "yr_2003": 14.4,
+        "yr_2004": 13.7,
+        "yr_2005": 16.8,
+        "yr_2006": 13.3,
+        "yr_2007": 14.7,
+        "yr_2008": 12.7,
+        "yr_2009": 11.9,
+        "yr_2010": 13.8,
+        "yr_2011": 11.3,
+        "yr_2012": 10.4,
+        "yr_2013": 10.5,
+        "yr_2014": 10.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.7664032,
+          38.2548599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Lancaster",
+        "Pollutant": "PM2.5",
+        "TS": "Weighted Annual Mean",
+        "Tss": 1,
+        "name": "Lancaster",
+        "desc": "Lancaster, PA",
+        "color": "",
+        "source": "Bing Maps",
+        "precision": "city/town",
+        "yr_2000": 17.8,
+        "yr_2001": 17.2,
+        "yr_2002": 16.2,
+        "yr_2003": 17.6,
+        "yr_2004": 16.6,
+        "yr_2005": 18.2,
+        "yr_2006": 14.1,
+        "yr_2007": 15.4,
+        "yr_2008": 13.9,
+        "yr_2009": 12.2,
+        "yr_2010": 11.7,
+        "yr_2011": 12,
+        "yr_2012": 12.6,
+        "yr_2013": 11.3,
+        "yr_2014": 11.1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.306229,
+          40.044437
+        ]
+      }
+    }
+  ]
+}

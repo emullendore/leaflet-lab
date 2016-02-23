@@ -1,2 +1,25 @@
-#map2 {height: 360px;}
-#map3 {height: 440px;}
+#map3 {
+  height: 440px;
+  width: 80%;
+  display: inline-block;
+}
+.leaflet-popup-content p {
+  margin: 0.1em 0;
+}
+#panel {
+  width: 55%;
+  padding: 1px;
+  display: inline;;;
+  vertical-align: top;
+  text-align:center;
+  line-height: 42px;
+}
+.range-slider {
+  width: 50%;
+}
+#forward {
+  float: center;
+}
+#reverse {
+  float: left;
+}
