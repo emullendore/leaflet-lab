@@ -72,7 +72,7 @@ map.options.minZoom=4;
 //for calculating radius of symbols based on
 //attValue
 function calcPropRadius(attValue){
-  var scaleFactor=180;
+  var scaleFactor=100;
   var area=attValue*scaleFactor;
   var radius=Math.sqrt(area/Math.PI);
   return radius
@@ -95,7 +95,7 @@ function updatePropSymbols(map, attribute) {
     if (layer.feature && layer.feature.properties[attribute]){
       //define props to find value of each attribute
       var props=layer.feature.properties;
-
+    //  console.log(props);
       //find radius
       var radius=calcPropRadius(props[attribute]);
       //apply to layer
@@ -104,9 +104,9 @@ function updatePropSymbols(map, attribute) {
       var popupContent="<p><b>City:</b>"+ props.City+"</p>";
 
       var year=attribute.split("_")[1];
-      console.log(year);
+      //console.log(year);
 
-      popupContent+="<p><b>Pollution level in" + year + ":</b>" + props[attribute]+ "PM2.5</p>";
+      popupContent+="<p><b>Pollution level in"+" "+ year + ":</b>"+ " " + props[attribute]+ "PM2.5</p>";
       //bind popup with layer
       layer.bindPopup(popupContent, {
 
@@ -181,7 +181,7 @@ function processData(data){
 
 //ajax callback function to get data from geojson
 function getData(map){
-  $.ajax("data/airqual2.geojson", {
+  $.ajax("data/airqual_newdata.geojson", {
     dataType: "json",
     success: function(response){
 
