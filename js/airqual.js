@@ -1,37 +1,24 @@
 
 
 function createMap(){
-var map=L.map('map3', {
-    center:[38,-97],
-    zoom: 4,
-    doubleClickZoom: false,
-    maxBounds: bounds
-  });
-L.tileLayer('https://b.tiles.mapbox.com/v4/emullendore.p7n4hkl0/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZW11bGxlbmRvcmUiLCJhIjoiY2lranhtcXQ4MDkya3Z0a200aGk0ZGRzMyJ9.zybsg8x8T8dh7mOgqTLiTg', {
-  attirbution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  var bounds=[[22,-128],[55,-60]]
+  var map=L.map('map3', {
+      center:[38,-97],
+      zoom: 4,
+      doubleClickZoom: false,
+      maxBounds: bounds
+    });
 
-}).addTo(map);
+    L.tileLayer('https://b.tiles.mapbox.com/v4/emullendore.p7n4hkl0/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZW11bGxlbmRvcmUiLCJhIjoiY2lranhtcXQ4MDkya3Z0a200aGk0ZGRzMyJ9.zybsg8x8T8dh7mOgqTLiTg', {
+
+  }).addTo(map);
 
   getData(map);
 
+  //create map, specifying tile source, center, and zoom of map
+  map.options.maxZoom=7;
+  map.options.minZoom=4;
 
-//create map, specifying tile source, center, and zoom of map
-
-
-var bounds=[[22,-128],
-    [49,-60]]
-
-map.options.maxZoom=7;
-map.options.minZoom=4;
-
-
-// ]);
-// bounds=new L.LatLngBounds(new L.LatLngBounds(22,-128), new L.LatLngBounds(49,-60));
-// map.options.maxBounds=bounds;
-
-//restrict zooming options --- IT DONT WORK
-
-//map.options.LatLngBounds (to add later)
 };
 
 
@@ -42,8 +29,7 @@ map.options.minZoom=4;
    //give points color options
    var options={
      fillColor: "#828282",
-     color: "#828282",
-     weight: 1.2,
+     weight: 1,
      opacity: 1,
      fillOpacity: 0.14
    };
@@ -54,6 +40,16 @@ map.options.minZoom=4;
   options.radius = calcPropRadius(attValue);
   //create layer based on location, options
   var layer= L.circleMarker(latlng, options);
+  //set initial condition that if >75 (above Ambien Air Quality Standards), indicate
+  if (features.properties[attribute]>75){
+    var line={color: 'darkorange'}
+    layer.setStyle(line);
+  };
+  if (features.properties[attribute]<=75){
+    var line={color: "grey"}
+    layer.setStyle(line);
+    }
+
   //create content
   var panelContent="<p><b>City:</b>"+" "+features.properties.desc+"</p>";
   var year=attribute.split("_")[1];
@@ -75,9 +71,7 @@ map.options.minZoom=4;
       this.closePopup();
     },
   //removed clicking function (for now)
-      click: function(){
-      $("#dates").html(attribute.split("_")[1]);
-      }
+
   });
 
   return layer;
@@ -126,10 +120,19 @@ function updatePropSymbols(map, attribute) {
 
         offset: new L.Point(0, -radius)
       })
-    }
+    };
+    //if value above 75, min SO2 AAQS, indicate
+    if (layer.feature && layer.feature.properties[attribute] > 75){
+      var line = {color: 'darkorange'}
+      layer.setStyle(line);
+    //if value below 75, return to grey
+    };
+    if (layer.feature && layer.feature.properties[attribute] <= 75){
+      var line = {color: "grey"}
+      layer.setStyle(line);
+    };
   })
 };
-
 //process data by creating attributes array
 function processData(data){
   var attributes=[];
@@ -147,18 +150,21 @@ function processData(data){
   return attributes;
 };
 
+//ACTIVITY 6
+//5th Operator: overlay of coal-fired power plants
 function addCoalPlants(response, map) {
   var pPlantMarkerOptions={
     radius: 5,
     fillColor: "steelblue",
-    color: "darkgrey",
+    color: "darkslategray",
     buffer: 3,
-    weight: 1,
+    weight: 0.6,
     opacity: 1,
     fillOpacity:1
     };
 
   L.geoJson(response, {
+    //convert point to layer, add pop ups, interactivty with overlayButton
     pointToLayer: function(feature, latlng) {
       //define layer and popupContent
       var layer2 = L.circleMarker(latlng, pPlantMarkerOptions)
@@ -188,7 +194,8 @@ function addCoalPlants(response, map) {
   }).addTo(map);
 };
 
-//MODULE 6
+
+//MODULE 6 - INCOMPLETE
 //function updateLegend(map, attribute){
 //   var year=attribute.split("_")[1];
 //   //console.log(year);
@@ -306,6 +313,7 @@ function createSequenceControls(map, attributes){
 //add slider
     $('.range-slider').val(index);
 //should updatePropSymbols with interaction
+
     updatePropSymbols(map, attributes[index]);
     //console.log(attributes[index]);
   });
@@ -331,10 +339,9 @@ function getData(map){
       //createLegend(map, attributes);
     }
   });
-
-  $.ajax({
+//add power plants geojson
+  $.ajax("data/pplants.geojson",{
     dataType: "json",
-    url: "data/pplants.geojson",
     success: function(response){
       addCoalPlants(response, map);
     }
