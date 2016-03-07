@@ -1,19 +1,21 @@
 
 body{background-image: url("/images/blubackgrnd.jpg");
       background-repeat: repeat-y;}
-.h1{font-size: 36px;}
-
-
+.h1{font-size: 36px};
 p{font-size: 15px}
 
+#paragraph{
+  font-size: 20px;
+}
 
-
+#caption{
+  position: inherit;
+}
 
 #overlayButton{
 
   position: relative;
   padding: 3px 3px;
-  padding-top: 6px;
   font-size: 14px;
   cursor: pointer;
   text-align: center;
@@ -25,18 +27,10 @@ p{font-size: 15px}
   border-radius: 10px;
   padding-bottom: 10px;
 }
-
 #overlayButton:hover {background-color: steelblue}
 
-#text{width: 30%;
-      float:left;
-      font-size: 18px;
-      font-family:serif;}
-#chart{float: left;
-      padding-left: 50px;
-      padding-top: 30px;
-        }
-
+#text{width: 30%; float:left;}
+#chart{float: left, padding 50px}
 #map3 {
 
   position: relative;;
