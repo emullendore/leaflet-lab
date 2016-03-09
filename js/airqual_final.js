@@ -1,6 +1,7 @@
 
 
 function createMap(){
+  //set panning bounds
   var bounds=[[19,-130],[55,-30]]
   var map=L.map('map3', {
       center:[38,-97],
@@ -27,6 +28,7 @@ function createPopup(properties, attribute, layer, radius){
   //concoct with additional text
   panelContent+="<p><b>Pollution Level in "+ year +": </b>"+properties[attribute]+" "+"ppb</p>";
   layer.bindPopup(panelContent,{
+    //position popup depending on radius
     offset: new L.point(0,-radius)
   });
 };
@@ -51,7 +53,7 @@ function pointToLayer(features, latlng, attributes){
 
   createPopup(features.properties, attribute, layer, options.radius)
 
-  //set initial condition that if >75 (above Ambien Air Quality Standards), indicate
+  //set initial condition that if >75 (above Ambient Air Quality Standards), indicate
   if (features.properties[attribute]>75){
     var line={color: 'darkorange'}
     layer.setStyle(line);
@@ -68,7 +70,6 @@ function pointToLayer(features, latlng, attributes){
     mouseout: function(){
       this.closePopup();
     },
-  //removed clicking function (for now)
 
   });
 
@@ -239,23 +240,28 @@ function updateLegend(map, attribute){
 };
 
 function getCircleValues(map, attribute){
+  //vars set to determine max, min values
   var min=Infinity,
       max=-Infinity;
   map.eachLayer(function(layer){
     if(layer.feature){
+      //set attributeValue so that all values within properties will be
+      //looked at
       var attributeValue=Number(layer.feature.properties[attribute]);
-
-      if(attributeValue< min){
+      console.log(attributeValue);
+      if(attributeValue< min){//which will always be the case
         min=attributeValue;
       };
 
       if(attributeValue>max){
         max=attributeValue;
       };
+    //there will min the min and max values in each sequencing
     };
   });
 
   var mean=(max+min)/2;
+//and a mean value too
 
   return{
     max: max,
@@ -266,11 +272,13 @@ function getCircleValues(map, attribute){
 
 //create slider, arrows
 function createSequenceControls(map, attributes){
+  //add slider, arrows
   var SequenceControl=L.Control.extend({
     options: {
       position: 'bottomleft'
     },
     onAdd: function(map){
+      //create sequence-control-container div element
       var container=L.DomUtil.create('div','sequence-control-container');
 
       $(container).append('<input class="range-slider" type="range">');
